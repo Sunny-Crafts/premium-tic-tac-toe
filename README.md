@@ -1,8 +1,8 @@
 # 🎮 Premium Tic Tac Toe
 
-A high-end, responsive Tic Tac Toe web application featuring a stunning Glassmorphism UI, intelligent AI, and persistent statistics.
+![Tic Tac Toe Preview](preview.png)
 
-![Tic Tac Toe Preview](https://github.com/Sunny-Crafts/Tic-Tac-Toe/raw/main/preview.png) *(Placeholder for your image)*
+A high-end, responsive Tic Tac Toe web application featuring a stunning Glassmorphism UI, intelligent AI, and persistent statistics.
 
 ## ✨ Key Features
 
@@ -19,37 +19,9 @@ A high-end, responsive Tic Tac Toe web application featuring a stunning Glassmor
 - **Backend:** Node.js with Express.js (Static file hosting & SPA routing).
 - **Logic:** Minimax Algorithm for the AI opponent.
 
-## 🛠️ Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Sunny-Crafts/Tic-Tac-Toe.git
-   cd Tic-Tac-Toe
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Run the server:**
-   ```bash
-   npm start
-   ```
-
-4. **Open in your browser:**
-   Navigate to `http://localhost:3000`
-
-## 📁 Project Structure
-
-- `index.html`: Main application structure and screens.
-- `style.css`: Premium styling, glassmorphism effects, and animations.
-- `script.js`: Game logic, AI (Minimax), routing, and localStorage handling.
-- `server.js`: Lightweight Express server for hosting and routing.
-
 ## 📜 License
 
 Distributed under the **ISC License**. See `LICENSE` for more information.
 
 ---
-Built with ❤️ by [Sunny](https://github.com/Sunny-Crafts)
+Built with ❤️ by Sunny (https://github.com/Sunny-Crafts)
