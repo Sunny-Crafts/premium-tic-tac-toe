@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe | Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Home Page -->
+    <section id="homePage" class="screen active">
+
+        <!-- Navbar -->
+        <nav class="premium-nav">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="navigate('/')" style="cursor:pointer">
+                    <span class="logo-sym-x">X</span>
+                    <span class="logo-sym-o">O</span>
+                    <span class="logo-premium">PREMIUM</span>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="/" class="nav-link active-link" id="navHomeLink">Home</a></li>
+                        <li><a href="/play/menu" class="nav-link" id="navPlayLink">Play</a></li>
+                        <li><a href="/play/stats" class="nav-link" id="navStatsLink">Stats</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="nav-cta-premium" id="navPlayBtn">
+                        <span class="cta-text">START PLAYING</span>
+                        <span class="cta-glow"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Two-Card Hero Layout -->
+        <div class="hero-row">
+
+            <!-- LEFT CARD: Branding & CTA -->
+            <div class="hero-card hero-card-left">
+                <h1 class="home-title">TIC <span class="title-highlight">TAC</span> TOE</h1>
+                <p class="home-desc">A beautifully crafted version of the timeless classic. Play against a friend or
+                    take on a smart AI opponent.</p>
+                <button class="home-cta" id="homePlayBtn">
+                    Play Now <span class="cta-icon">▶</span>
+                </button>
+                <div class="home-stats-row">
+                    <div class="home-stat">
+                        <span class="hs-value">2</span>
+                        <span class="hs-label">Game Modes</span>
+                    </div>
+                    <div class="home-stat-divider"></div>
+                    <div class="home-stat">
+                        <span class="hs-value">AI</span>
+                        <span class="hs-label">Minimax Brain</span>
+                    </div>
+                    <div class="home-stat-divider"></div>
+                    <div class="home-stat">
+                        <span class="hs-value">∞</span>
+                        <span class="hs-label">Replays</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT CARD: Features -->
+            <div class="hero-card hero-card-right">
+                <div class="hero-features-label">What's inside</div>
+                <div class="home-features">
+                    <div class="hf-item" data-feature="ai" style="cursor:pointer;">
+                        <span class="hf-icon">🤖</span>
+                        <div>
+                            <strong>Smart AI</strong>
+                            <span>Unbeatable Minimax algorithm</span>
+                        </div>
+                        <span class="hf-arrow">›</span>
+                    </div>
+                    <div class="hf-item" data-feature="stats" style="cursor:pointer;">
+                        <span class="hf-icon">📊</span>
+                        <div>
+                            <strong>Stats Dashboard</strong>
+                            <span>Track your wins & history</span>
+                        </div>
+                        <span class="hf-arrow">›</span>
+                    </div>
+                    <div class="hf-item" data-feature="multiplayer" style="cursor:pointer;">
+                        <span class="hf-icon">👥</span>
+                        <div>
+                            <strong>Local Multiplayer</strong>
+                            <span>Play with a friend nearby</span>
+                        </div>
+                        <span class="hf-arrow">›</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Main Menu -->
+    <section id="mainMenu" class="screen hidden">
+        <div class="menu-container futuristic">
+            <div class="logo-area">
+                <button class="back-btn" id="backFromMenu" style="position: absolute; top: 1.5rem; left: 1.5rem;">←
+                    Home</button>
+                <h1 class="logo-title">TIC TAC TOE</h1>
+                <div class="premium-badge">
+                    <span class="line"></span>
+                    <span class="text">PREMIUM EDITION</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="menu-options">
+                <button class="menu-btn glass-btn" id="btnPvP">
+                    <div class="btn-content">
+                        <span class="btn-icon">👥</span>
+                        <div class="btn-text">
+                            <span class="main-text">Play vs Friend</span>
+                            <span class="sub-text">Local multiplayer mode</span>
+                        </div>
+                    </div>
+                </button>
+                <button class="menu-btn glass-btn" id="btnPvC">
+                    <div class="btn-content">
+                        <span class="btn-icon">🤖</span>
+                        <div class="btn-text">
+                            <span class="main-text">Play vs AI</span>
+                            <span class="sub-text">Challenge the computer</span>
+                        </div>
+                    </div>
+                </button>
+                <button class="menu-btn glass-btn" id="btnDashboard">
+                    <div class="btn-content">
+                        <span class="btn-icon">📊</span>
+                        <div class="btn-text">
+                            <span class="main-text">View Stats</span>
+                            <span class="sub-text">Win rates & history</span>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Name Input Screen -->
+    <section id="nameInputScreen" class="screen hidden">
+        <div class="menu-container glass-panel">
+            <h2 class="section-title">Enter Names</h2>
+            <p class="section-subtitle">Please enter player names to start</p>
+
+            <form id="nameForm" class="name-form-refined">
+                <div class="input-stack">
+                    <div class="input-group-premium">
+                        <label for="playerXName">Player 1 (X)</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="playerXName" placeholder="Enter name" required>
+                            <span class="input-glow"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-group-premium" id="playerOInputGroup">
+                        <label for="playerOName">Player 2 (O)</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="playerOName" placeholder="Enter name" required>
+                            <span class="input-glow"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="action-btn primary-glow">Start Game</button>
+                    <button type="button" class="action-btn link-style" id="backFromName">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section id="gameScreen" class="screen hidden">
+        <main class="game-container">
+            <header class="game-header">
+                <button class="back-btn" id="backFromGame">← Home</button>
+                <h1>Tic Tac Toe</h1>
+                <div class="status" id="status">X's Turn</div>
+            </header>
+
+            <div class="board" id="board">
+                <div class="cell" data-cell-index="0"></div>
+                <div class="cell" data-cell-index="1"></div>
+                <div class="cell" data-cell-index="2"></div>
+                <div class="cell" data-cell-index="3"></div>
+                <div class="cell" data-cell-index="4"></div>
+                <div class="cell" data-cell-index="5"></div>
+                <div class="cell" data-cell-index="6"></div>
+                <div class="cell" data-cell-index="7"></div>
+                <div class="cell" data-cell-index="8"></div>
+            </div>
+
+            <footer class="game-footer">
+                <button class="restart-btn" id="restartBtn">Restart Game</button>
+            </footer>
+        </main>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboardScreen" class="screen hidden">
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                <button class="back-btn" id="backFromDash">← Menu</button>
+                <h2>Performance Analytics</h2>
+            </header>
+
+            <div class="analytics-row">
+                <div class="win-rate-container">
+                    <div class="progress-ring-box">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring__circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8"
+                                fill="transparent" r="52" cx="60" cy="60" />
+                            <circle id="progressX" class="progress-ring__circle" stroke="var(--accent-x)"
+                                stroke-width="8" fill="transparent" r="52" cx="60" cy="60" />
+                        </svg>
+                        <div class="ring-label">
+                            <span class="ring-percent" id="percentX">0%</span>
+                            <span class="ring-desc">X Win Rate</span>
+                        </div>
+                    </div>
+                    <div class="progress-ring-box">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring__circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8"
+                                fill="transparent" r="52" cx="60" cy="60" />
+                            <circle id="progressO" class="progress-ring__circle" stroke="var(--accent-o)"
+                                stroke-width="8" fill="transparent" r="52" cx="60" cy="60" />
+                        </svg>
+                        <div class="ring-label">
+                            <span class="ring-percent" id="percentO">0%</span>
+                            <span class="ring-desc">O Win Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card x-stat">
+                    <div class="stat-value" id="statX">0</div>
+                    <div class="stat-label">X Victories</div>
+                </div>
+                <div class="stat-card o-stat">
+                    <div class="stat-value" id="statO">0</div>
+                    <div class="stat-label">O Victories</div>
+                </div>
+                <div class="stat-card draw-stat">
+                    <div class="stat-value" id="statDraw">0</div>
+                    <div class="stat-label">Draws</div>
+                </div>
+                <div class="stat-card total-stat">
+                    <div class="stat-value" id="statTotal">0</div>
+                    <div class="stat-label">Matches</div>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="section-header">
+                    <h3>Match History</h3>
+                    <span class="live-indicator">Recent activity</span>
+                </div>
+                <div class="history-list-container">
+                    <ul id="historyList">
+                        <!-- History items populated by JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Info Popup Modal -->
+    <div id="featureModal" class="feature-modal-overlay" aria-hidden="true">
+        <div class="feature-modal-card">
+            <button class="feature-modal-close" id="featureModalClose" aria-label="Close">✕</button>
+            <div class="feature-modal-icon" id="featureModalIcon">🤖</div>
+            <h3 class="feature-modal-title" id="featureModalTitle">Smart AI</h3>
+            <p class="feature-modal-desc" id="featureModalDesc"></p>
+            <ul class="feature-modal-list" id="featureModalList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
