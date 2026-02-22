@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 // Frontend Routes (SPA support)
-app.get(['/', '/play/*'], (req, res) => {
+app.get(['/', '/play/:path*'], (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
