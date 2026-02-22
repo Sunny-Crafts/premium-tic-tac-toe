@@ -423,11 +423,11 @@ nameForm.addEventListener('submit', (e) => {
     navigate('/play/game');
 });
 
-// Back buttons navigate home
+// Back buttons navigate to Play Menu
 backFromMenu.addEventListener('click', () => navigate('/'));
-backFromName.addEventListener('click', () => navigate('/'));
-backFromGame.addEventListener('click', () => navigate('/'));
-backFromDash.addEventListener('click', () => navigate('/'));
+backFromName.addEventListener('click', () => navigate('/play/menu'));
+backFromGame.addEventListener('click', () => navigate('/play/menu'));
+backFromDash.addEventListener('click', () => navigate('/play/menu'));
 
 // --- Navbar & Footer links ---
 document.getElementById('navPlayBtn').addEventListener('click', (e) => { e.preventDefault(); navigate('/play/menu'); });

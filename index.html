@@ -113,10 +113,9 @@
 
     <!-- Main Menu -->
     <section id="mainMenu" class="screen hidden">
+        <button class="back-btn-global" id="backFromMenu">← Home</button>
         <div class="menu-container futuristic">
             <div class="logo-area">
-                <button class="back-btn" id="backFromMenu" style="position: absolute; top: 1.5rem; left: 1.5rem;">←
-                    Home</button>
                 <h1 class="logo-title">TIC TAC TOE</h1>
                 <div class="premium-badge">
                     <span class="line"></span>
@@ -159,6 +158,7 @@
 
     <!-- Name Input Screen -->
     <section id="nameInputScreen" class="screen hidden">
+        <button class="back-btn-global" id="backFromName">← Menu</button>
         <div class="menu-container glass-panel">
             <h2 class="section-title">Enter Names</h2>
             <p class="section-subtitle">Please enter player names to start</p>
@@ -182,9 +182,8 @@
                     </div>
                 </div>
 
-                <div class="form-actions">
+                <div class="form-actions" style="justify-content: center;">
                     <button type="submit" class="action-btn primary-glow">Start Game</button>
-                    <button type="button" class="action-btn link-style" id="backFromName">Cancel</button>
                 </div>
             </form>
         </div>
@@ -192,9 +191,9 @@
 
     <!-- Game Section -->
     <section id="gameScreen" class="screen hidden">
+        <button class="back-btn-global" id="backFromGame">← Menu</button>
         <main class="game-container">
             <header class="game-header">
-                <button class="back-btn" id="backFromGame">← Home</button>
                 <h1>Tic Tac Toe</h1>
                 <div class="status" id="status">X's Turn</div>
             </header>
@@ -219,9 +218,9 @@
 
     <!-- Dashboard Section -->
     <section id="dashboardScreen" class="screen hidden">
+        <button class="back-btn-global" id="backFromDash">← Menu</button>
         <div class="dashboard-container">
             <header class="dashboard-header">
-                <button class="back-btn" id="backFromDash">← Menu</button>
                 <h2>Performance Analytics</h2>
             </header>
 
