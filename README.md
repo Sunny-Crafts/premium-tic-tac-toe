@@ -1,7 +1,5 @@
 # 🎮 Premium Tic Tac Toe
 
-![Tic Tac Toe Preview](preview.png)
-
 A high-end, responsive Tic Tac Toe web application featuring a stunning Glassmorphism UI, intelligent AI, and persistent statistics.
 
 ## ✨ Key Features
@@ -19,9 +17,6 @@ A high-end, responsive Tic Tac Toe web application featuring a stunning Glassmor
 - **Backend:** Node.js with Express.js (Static file hosting & SPA routing).
 - **Logic:** Minimax Algorithm for the AI opponent.
 
-## 📜 License
-
-Distributed under the **ISC License**. See `LICENSE` for more information.
 
 ---
 Built with ❤️ by Sunny (https://github.com/Sunny-Crafts)
